@@ -3,7 +3,7 @@
 		<TargetFrameworks>netstandard2.0;$(MauiPlatforms)</TargetFrameworks>
 		<AssemblyName>Microsoft.Maui.Controls.Xaml</AssemblyName>
 		<RootNamespace>Microsoft.Maui.Controls.Xaml</RootNamespace>
-		<NoWarn>$(NoWarn);CA2200;NU5128</NoWarn>
+		<NoWarn>$(NoWarn);CA2200;NU5128;NU5118</NoWarn>
 	</PropertyGroup>
   <PropertyGroup Condition="$(TargetFramework.Contains('-windows')) == true ">
     <NoWarn>$(NoWarn);CA1416</NoWarn>
@@ -27,8 +27,11 @@
     </PropertyGroup>
   </Target>
 
-   <PropertyGroup>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);_MauiPackXamlDesignAssemblies</TargetsForTfmSpecificBuildOutput>
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>
+      $(TargetsForTfmSpecificBuildOutput);
+      _MauiPackXamlDesignAssemblies
+    </TargetsForTfmSpecificBuildOutput>
   </PropertyGroup>
 
   <Target Name="_MauiPackXamlDesignAssemblies">

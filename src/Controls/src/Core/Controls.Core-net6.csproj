@@ -32,12 +32,6 @@
       $(TargetsForTfmSpecificBuildOutput);
       _MauiPackXamlDesignAssemblies
     </TargetsForTfmSpecificBuildOutput>
-<!--
-    <TargetsForTfmSpecificContentInPackage>
-      $(TargetsForTfmSpecificContentInPackage);
-      _MauiPackSourceGenerators
-    </TargetsForTfmSpecificContentInPackage>
--->
   </PropertyGroup>
 
   <Target Name="_MauiPackXamlDesignAssemblies">
@@ -48,11 +42,4 @@
     </ItemGroup>
   </Target>
 
-  <Target Name="_MauiPackSourceGenerators">
-    <ItemGroup>
-      <TfmSpecificPackageFile Include="..\SourceGen\bin\$(Configuration)\netstandard2.0\Microsoft.Maui.Controls.SourceGen.dll">
-        <PackagePath>analyzers/dotnet/cs</PackagePath>
-      </TfmSpecificPackageFile>
-    </ItemGroup>
-  </Target>
 </Project>
